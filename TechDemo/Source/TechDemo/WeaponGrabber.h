@@ -2,6 +2,9 @@
 
 #pragma once
 
+#include "DrawDebugHelpers.h"
+#include "CollisionQueryParams.h"
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "WeaponGrabber.generated.h"
@@ -23,6 +26,11 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+private:
+
+	UPROPERTY(EditAnywhere)
+	float armLength = 20.f;
 
 		
 };
