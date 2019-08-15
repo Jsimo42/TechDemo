@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TechDemo.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{6EFF7945-73C4-4B2B-86A6-21F2909EC4A2}</UniqueIdentifier>
+      <UniqueIdentifier>{882DBADE-EF34-4A8B-91E0-16DD25659252}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TechDemo.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{DC72F58F-A498-411E-AFB4-416B4DB20072}</UniqueIdentifier>
+      <UniqueIdentifier>{13BD64A6-96B1-441A-A47E-F3CDC64F0C8D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TechDemo">
-      <UniqueIdentifier>{9067259D-B5F6-414C-824C-ECAC413D44C1}</UniqueIdentifier>
+      <UniqueIdentifier>{C9D58E81-8248-4285-A214-067BD4E4D81B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TechDemo\TechDemo.Build.cs">
       <Filter>Source\TechDemo</Filter>
@@ -63,6 +63,12 @@
       <Filter>Source\TechDemo</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TechDemo\TechDemoProjectile.h">
+      <Filter>Source\TechDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TechDemo\WeaponGrabber.cpp">
+      <Filter>Source\TechDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TechDemo\WeaponGrabber.h">
       <Filter>Source\TechDemo</Filter>
     </ClInclude>
   </ItemGroup>
