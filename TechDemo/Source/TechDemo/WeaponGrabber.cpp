@@ -17,7 +17,25 @@ void UWeaponGrabber::BeginPlay()
 	Super::BeginPlay();
 
 	UE_LOG(LogTemp, Warning, TEXT("Grabber Here"));
-	
+
+	physicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
+
+	if (!physicsHandle)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s missing physics Handle Componenet"), *GetOwner()->GetName())
+	}
+
+	inputComponent = GetOwner()->FindComponentByClass<UInputComponent>();
+
+	if (inputComponent)
+	{
+		inputComponent->BindAction("PickUp", IE_Pressed, this, &UWeaponGrabber::PickUp);
+		inputComponent->BindAction("Drop", IE_Pressed, this, &UWeaponGrabber::Drop);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s missing input Componenet"), *GetOwner()->GetName())
+	}
 }
 
 
@@ -48,5 +66,19 @@ void UWeaponGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 		UE_LOG(LogTemp, Warning, TEXT("Line Trace Hit: %s"), *(actorHit->GetName()))
 	}
 	
+}
+
+void UWeaponGrabber::PickUp()
+{
+	UE_LOG(LogTemp, Error, TEXT("Pickup"))
+	//Check Socket Empty
+	//If So Bind New Weapon To Socket
+	//Else do nothing
+}
+
+void UWeaponGrabber::Drop()
+{
+	UE_LOG(LogTemp, Error, TEXT("Drop"))
+	//Unbind weapon from socket
 }
 

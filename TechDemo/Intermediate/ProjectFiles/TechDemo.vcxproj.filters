@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TechDemo.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{882DBADE-EF34-4A8B-91E0-16DD25659252}</UniqueIdentifier>
+      <UniqueIdentifier>{253D7981-FA2C-495C-A6F8-AE5E5E42F017}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TechDemo.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{13BD64A6-96B1-441A-A47E-F3CDC64F0C8D}</UniqueIdentifier>
+      <UniqueIdentifier>{536EE4A5-F945-4980-A8AE-F92CCD89D6AA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TechDemo">
-      <UniqueIdentifier>{C9D58E81-8248-4285-A214-067BD4E4D81B}</UniqueIdentifier>
+      <UniqueIdentifier>{912C877D-8AC0-465D-A01C-39F937C116CA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TechDemo\TechDemo.Build.cs">
       <Filter>Source\TechDemo</Filter>

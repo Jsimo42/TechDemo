@@ -4,6 +4,8 @@
 
 #include "DrawDebugHelpers.h"
 #include "CollisionQueryParams.h"
+#include "PhysicsEngine/PhysicsHandleComponent.h"
+#include "Components/InputComponent.h"
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
@@ -32,5 +34,10 @@ private:
 	UPROPERTY(EditAnywhere)
 	float armLength = 20.f;
 
-		
+	UPhysicsHandleComponent* physicsHandle = nullptr;
+	UInputComponent* inputComponent = nullptr;
+
+	void PickUp();
+	void Drop();
+
 };
