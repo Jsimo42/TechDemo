@@ -13,9 +13,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TECHDEMO_WeaponGrabber_generated_h
 
-#define TechDemo_Source_TechDemo_WeaponGrabber_h_18_RPC_WRAPPERS
-#define TechDemo_Source_TechDemo_WeaponGrabber_h_18_RPC_WRAPPERS_NO_PURE_DECLS
-#define TechDemo_Source_TechDemo_WeaponGrabber_h_18_INCLASS_NO_PURE_DECLS \
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_14_DELEGATE \
+static inline void FOnGrab_DelegateWrapper(const FMulticastScriptDelegate& OnGrab) \
+{ \
+	OnGrab.ProcessMulticastDelegate<UObject>(NULL); \
+}
+
+
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_19_RPC_WRAPPERS
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_19_RPC_WRAPPERS_NO_PURE_DECLS
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWeaponGrabber(); \
 	friend struct Z_Construct_UClass_UWeaponGrabber_Statics; \
@@ -24,7 +31,7 @@ public: \
 	DECLARE_SERIALIZER(UWeaponGrabber)
 
 
-#define TechDemo_Source_TechDemo_WeaponGrabber_h_18_INCLASS \
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_19_INCLASS \
 private: \
 	static void StaticRegisterNativesUWeaponGrabber(); \
 	friend struct Z_Construct_UClass_UWeaponGrabber_Statics; \
@@ -33,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(UWeaponGrabber)
 
 
-#define TechDemo_Source_TechDemo_WeaponGrabber_h_18_STANDARD_CONSTRUCTORS \
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_19_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UWeaponGrabber(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UWeaponGrabber) \
@@ -46,7 +53,7 @@ private: \
 public:
 
 
-#define TechDemo_Source_TechDemo_WeaponGrabber_h_18_ENHANCED_CONSTRUCTORS \
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UWeaponGrabber(UWeaponGrabber&&); \
@@ -57,29 +64,29 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UWeaponGrabber); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UWeaponGrabber)
 
 
-#define TechDemo_Source_TechDemo_WeaponGrabber_h_18_PRIVATE_PROPERTY_OFFSET \
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_19_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__armLength() { return STRUCT_OFFSET(UWeaponGrabber, armLength); }
 
 
-#define TechDemo_Source_TechDemo_WeaponGrabber_h_15_PROLOG
-#define TechDemo_Source_TechDemo_WeaponGrabber_h_18_GENERATED_BODY_LEGACY \
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_16_PROLOG
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_19_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TechDemo_Source_TechDemo_WeaponGrabber_h_18_PRIVATE_PROPERTY_OFFSET \
-	TechDemo_Source_TechDemo_WeaponGrabber_h_18_RPC_WRAPPERS \
-	TechDemo_Source_TechDemo_WeaponGrabber_h_18_INCLASS \
-	TechDemo_Source_TechDemo_WeaponGrabber_h_18_STANDARD_CONSTRUCTORS \
+	TechDemo_Source_TechDemo_WeaponGrabber_h_19_PRIVATE_PROPERTY_OFFSET \
+	TechDemo_Source_TechDemo_WeaponGrabber_h_19_RPC_WRAPPERS \
+	TechDemo_Source_TechDemo_WeaponGrabber_h_19_INCLASS \
+	TechDemo_Source_TechDemo_WeaponGrabber_h_19_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TechDemo_Source_TechDemo_WeaponGrabber_h_18_GENERATED_BODY \
+#define TechDemo_Source_TechDemo_WeaponGrabber_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TechDemo_Source_TechDemo_WeaponGrabber_h_18_PRIVATE_PROPERTY_OFFSET \
-	TechDemo_Source_TechDemo_WeaponGrabber_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	TechDemo_Source_TechDemo_WeaponGrabber_h_18_INCLASS_NO_PURE_DECLS \
-	TechDemo_Source_TechDemo_WeaponGrabber_h_18_ENHANCED_CONSTRUCTORS \
+	TechDemo_Source_TechDemo_WeaponGrabber_h_19_PRIVATE_PROPERTY_OFFSET \
+	TechDemo_Source_TechDemo_WeaponGrabber_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	TechDemo_Source_TechDemo_WeaponGrabber_h_19_INCLASS_NO_PURE_DECLS \
+	TechDemo_Source_TechDemo_WeaponGrabber_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

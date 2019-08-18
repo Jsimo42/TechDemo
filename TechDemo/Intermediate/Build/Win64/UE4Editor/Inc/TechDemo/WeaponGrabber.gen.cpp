@@ -13,11 +13,35 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWeaponGrabber() {}
 // Cross Module References
+	TECHDEMO_API UFunction* Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature();
+	UPackage* Z_Construct_UPackage__Script_TechDemo();
 	TECHDEMO_API UClass* Z_Construct_UClass_UWeaponGrabber_NoRegister();
 	TECHDEMO_API UClass* Z_Construct_UClass_UWeaponGrabber();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
-	UPackage* Z_Construct_UPackage__Script_TechDemo();
+	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "WeaponGrabber.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_TechDemo, nullptr, "OnGrab__DelegateSignature", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	void UWeaponGrabber::StaticRegisterNativesUWeaponGrabber()
 	{
 	}
@@ -35,6 +59,14 @@ void EmptyLinkFunctionForGeneratedCodeWeaponGrabber() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_armLength_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_armLength;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_onGrab_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_onGrab;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_lastActorHit_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_lastActorHit;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -58,8 +90,23 @@ void EmptyLinkFunctionForGeneratedCodeWeaponGrabber() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_armLength = { "armLength", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponGrabber, armLength), METADATA_PARAMS(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_armLength_MetaData, ARRAY_COUNT(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_armLength_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_onGrab_MetaData[] = {
+		{ "ModuleRelativePath", "WeaponGrabber.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_onGrab = { "onGrab", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponGrabber, onGrab), Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_onGrab_MetaData, ARRAY_COUNT(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_onGrab_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_lastActorHit_MetaData[] = {
+		{ "Category", "WeaponGrabber" },
+		{ "ModuleRelativePath", "WeaponGrabber.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_lastActorHit = { "lastActorHit", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponGrabber, lastActorHit), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_lastActorHit_MetaData, ARRAY_COUNT(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_lastActorHit_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWeaponGrabber_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_armLength,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_onGrab,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_lastActorHit,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UWeaponGrabber_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UWeaponGrabber>::IsAbstract,
@@ -88,7 +135,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponGrabber() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWeaponGrabber, 3561601479);
+	IMPLEMENT_CLASS(UWeaponGrabber, 2079874862);
 	template<> TECHDEMO_API UClass* StaticClass<UWeaponGrabber>()
 	{
 		return UWeaponGrabber::StaticClass();

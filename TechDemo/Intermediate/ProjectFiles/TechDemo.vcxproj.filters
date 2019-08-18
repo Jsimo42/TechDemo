@@ -72,4 +72,20 @@
       <Filter>Source\TechDemo</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\TechDemo\Bullet.h">
+      <Filter>Source\TechDemo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TechDemo\ShootingComponent.h">
+      <Filter>Source\TechDemo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\TechDemo\Bullet.cpp">
+      <Filter>Source\TechDemo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\TechDemo\ShootingComponent.cpp">
+      <Filter>Source\TechDemo</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
