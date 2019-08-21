@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TechDemo.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{253D7981-FA2C-495C-A6F8-AE5E5E42F017}</UniqueIdentifier>
+      <UniqueIdentifier>{54D83698-8BEE-4926-8738-021662232B81}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TechDemo.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{536EE4A5-F945-4980-A8AE-F92CCD89D6AA}</UniqueIdentifier>
+      <UniqueIdentifier>{44915112-B8F3-4593-AD81-EE82E7472DE3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,8 +30,20 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TechDemo">
-      <UniqueIdentifier>{912C877D-8AC0-465D-A01C-39F937C116CA}</UniqueIdentifier>
+      <UniqueIdentifier>{8316536F-D720-4503-B162-12D05DF663CA}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TechDemo\Bullet.cpp">
+      <Filter>Source\TechDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TechDemo\Bullet.h">
+      <Filter>Source\TechDemo</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TechDemo\ShootingComponent.cpp">
+      <Filter>Source\TechDemo</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TechDemo\ShootingComponent.h">
+      <Filter>Source\TechDemo</Filter>
+    </ClInclude>
     <None Include="..\..\Source\TechDemo\TechDemo.Build.cs">
       <Filter>Source\TechDemo</Filter>
     </None>
@@ -71,21 +83,5 @@
     <ClInclude Include="..\..\Source\TechDemo\WeaponGrabber.h">
       <Filter>Source\TechDemo</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\TechDemo\Bullet.h">
-      <Filter>Source\TechDemo</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TechDemo\ShootingComponent.h">
-      <Filter>Source\TechDemo</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\TechDemo\Bullet.cpp">
-      <Filter>Source\TechDemo</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TechDemo\ShootingComponent.cpp">
-      <Filter>Source\TechDemo</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

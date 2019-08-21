@@ -64,7 +64,7 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 		{ "ModuleRelativePath", "ShootingComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass = { "projectileClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShootingComponent, projectileClass), Z_Construct_UClass_ABullet_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass = { "projectileClass", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShootingComponent, projectileClass), Z_Construct_UClass_ABullet_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShootingComponent_Statics::NewProp_muzzleOffset_MetaData[] = {
 		{ "Category", "Gameplay" },
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UShootingComponent, 2263768030);
+	IMPLEMENT_CLASS(UShootingComponent, 4126762496);
 	template<> TECHDEMO_API UClass* StaticClass<UShootingComponent>()
 	{
 		return UShootingComponent::StaticClass();

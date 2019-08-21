@@ -4,6 +4,7 @@
 
 #include "Components/InputComponent.h"
 #include "GameFrameWork/Actor.h"
+#include "Math/UnrealMathUtility.h"
 #include "WeaponGrabber.h"
 
 #include "CoreMinimal.h"
@@ -35,7 +36,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 		FVector muzzleOffset;
 
-	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
 		TSubclassOf<class ABullet> projectileClass;
 
 	void SetupInputComponent();

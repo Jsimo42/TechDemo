@@ -31,17 +31,22 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	AActor* lastActorHit = nullptr;
+		AActor* lastActorHit = nullptr;
 
 	UPROPERTY(BlueprintAssignable)
 		FOnGrab onGrab;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool IsAiming = false;
+
 	bool GetWeaponAttached();
+	bool GetIsAiming() { return IsAiming; };
+	AActor* GetLastActor() { return lastActorHit; }
 
 private:
 
 	UPROPERTY(EditAnywhere)
-	float armLength = 100.f;
+	float armLength = 150.f;
 
 	UPhysicsHandleComponent* physicsHandle = nullptr;
 	UInputComponent* inputComponent = nullptr;
