@@ -39,6 +39,14 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_projectileClass;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_currentAmmo_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_currentAmmo;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_maxAmmo_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_maxAmmo;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_muzzleOffset_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_muzzleOffset;
@@ -66,6 +74,20 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass = { "projectileClass", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShootingComponent, projectileClass), Z_Construct_UClass_ABullet_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShootingComponent_Statics::NewProp_currentAmmo_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "ModuleRelativePath", "ShootingComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_currentAmmo = { "currentAmmo", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShootingComponent, currentAmmo), METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_currentAmmo_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_currentAmmo_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShootingComponent_Statics::NewProp_maxAmmo_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "ModuleRelativePath", "ShootingComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_maxAmmo = { "maxAmmo", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShootingComponent, maxAmmo), METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_maxAmmo_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_maxAmmo_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShootingComponent_Statics::NewProp_muzzleOffset_MetaData[] = {
 		{ "Category", "Gameplay" },
 		{ "ModuleRelativePath", "ShootingComponent.h" },
@@ -74,6 +96,8 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_muzzleOffset = { "muzzleOffset", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShootingComponent, muzzleOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_muzzleOffset_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_muzzleOffset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UShootingComponent_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShootingComponent_Statics::NewProp_currentAmmo,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShootingComponent_Statics::NewProp_maxAmmo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShootingComponent_Statics::NewProp_muzzleOffset,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UShootingComponent_Statics::StaticCppClassTypeInfo = {
@@ -103,7 +127,7 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UShootingComponent, 4126762496);
+	IMPLEMENT_CLASS(UShootingComponent, 3870196768);
 	template<> TECHDEMO_API UClass* StaticClass<UShootingComponent>()
 	{
 		return UShootingComponent::StaticClass();

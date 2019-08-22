@@ -47,6 +47,7 @@ void UShootingComponent::SetupInputComponent()
 	if (inputComponent)
 	{
 		inputComponent->BindAction("Fire", IE_Pressed, this, &UShootingComponent::Fire);
+		inputComponent->BindAction("Reload", IE_Pressed, this, &UShootingComponent::Reload);
 	}
 	else
 	{
@@ -82,12 +83,13 @@ void UShootingComponent::Fire()
 			spawnParams.Owner = GetOwner();
 			spawnParams.Instigator = GetOwner()->Instigator;
 
-			ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
-
-			if (bullet)
+			if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Shotgun_C_0")
 			{
-				if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Shotgun_C_0")
+				maxAmmo = 4;
+
+				if (currentAmmo > 0)
 				{
+					ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
 					ABullet* bullet1 = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
 					ABullet* bullet2 = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
 
@@ -109,11 +111,30 @@ void UShootingComponent::Fire()
 
 					launchDirection = { (float)x, (float)y, muzzleRot.Vector().Z };;
 					bullet2->FireInDirection(launchDirection);
+
+					currentAmmo--;
 				}
-				else if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Pistol_C_0")
+				else
 				{
+					return;
+				}
+			}
+			else if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Pistol_C_0")
+			{
+				maxAmmo = 25;
+					
+				if (currentAmmo > 0)
+				{
+					ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
+
 					FVector launchDirection = muzzleRot.Vector();
 					bullet->FireInDirection(launchDirection);
+
+					currentAmmo--;
+				}
+				else
+				{
+					return;
 				}
 			}
 		}

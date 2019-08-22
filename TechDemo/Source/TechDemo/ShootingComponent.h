@@ -37,9 +37,16 @@ public:
 		FVector muzzleOffset;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
+		int32 maxAmmo = 5;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
+		int32 currentAmmo = 5;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
 		TSubclassOf<class ABullet> projectileClass;
 
 	void SetupInputComponent();
 
 	void Fire();
+	void Reload() { currentAmmo = maxAmmo; }
 };
