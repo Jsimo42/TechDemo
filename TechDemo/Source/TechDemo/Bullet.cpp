@@ -11,6 +11,7 @@ ABullet::ABullet()
 
 	//Initialise collision component
 	collisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
+	collisionComponent->BodyInstance.SetCollisionProfileName(TEXT("Projectile"));
 	collisionComponent->InitSphereRadius(15.f);
 	RootComponent = collisionComponent;
 
