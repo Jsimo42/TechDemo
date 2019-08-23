@@ -5,6 +5,9 @@
 #include "Components/InputComponent.h"
 #include "GameFrameWork/Actor.h"
 #include "Math/UnrealMathUtility.h"
+#include "Kismet/GameplayStatics.h"
+#include "ConstructorHelpers.h"
+#include "Sound/SoundCue.h"
 #include "WeaponGrabber.h"
 
 #include "CoreMinimal.h"
@@ -37,10 +40,10 @@ public:
 		FVector muzzleOffset;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
-		int32 maxAmmo = 5;
+		int32 maxAmmo = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
-		int32 currentAmmo = 5;
+		int32 currentAmmo = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
 		TSubclassOf<class ABullet> projectileClass;

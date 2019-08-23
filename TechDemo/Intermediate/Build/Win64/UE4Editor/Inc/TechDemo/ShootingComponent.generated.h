@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TECHDEMO_ShootingComponent_generated_h
 
-#define TechDemo_Source_TechDemo_ShootingComponent_h_18_RPC_WRAPPERS
-#define TechDemo_Source_TechDemo_ShootingComponent_h_18_RPC_WRAPPERS_NO_PURE_DECLS
-#define TechDemo_Source_TechDemo_ShootingComponent_h_18_INCLASS_NO_PURE_DECLS \
+#define TechDemo_Source_TechDemo_ShootingComponent_h_21_RPC_WRAPPERS
+#define TechDemo_Source_TechDemo_ShootingComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS
+#define TechDemo_Source_TechDemo_ShootingComponent_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUShootingComponent(); \
 	friend struct Z_Construct_UClass_UShootingComponent_Statics; \
@@ -24,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(UShootingComponent)
 
 
-#define TechDemo_Source_TechDemo_ShootingComponent_h_18_INCLASS \
+#define TechDemo_Source_TechDemo_ShootingComponent_h_21_INCLASS \
 private: \
 	static void StaticRegisterNativesUShootingComponent(); \
 	friend struct Z_Construct_UClass_UShootingComponent_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(UShootingComponent)
 
 
-#define TechDemo_Source_TechDemo_ShootingComponent_h_18_STANDARD_CONSTRUCTORS \
+#define TechDemo_Source_TechDemo_ShootingComponent_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UShootingComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UShootingComponent) \
@@ -46,7 +46,7 @@ private: \
 public:
 
 
-#define TechDemo_Source_TechDemo_ShootingComponent_h_18_ENHANCED_CONSTRUCTORS \
+#define TechDemo_Source_TechDemo_ShootingComponent_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UShootingComponent(UShootingComponent&&); \
@@ -57,26 +57,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UShootingComponent); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UShootingComponent)
 
 
-#define TechDemo_Source_TechDemo_ShootingComponent_h_18_PRIVATE_PROPERTY_OFFSET
-#define TechDemo_Source_TechDemo_ShootingComponent_h_15_PROLOG
-#define TechDemo_Source_TechDemo_ShootingComponent_h_18_GENERATED_BODY_LEGACY \
+#define TechDemo_Source_TechDemo_ShootingComponent_h_21_PRIVATE_PROPERTY_OFFSET
+#define TechDemo_Source_TechDemo_ShootingComponent_h_18_PROLOG
+#define TechDemo_Source_TechDemo_ShootingComponent_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TechDemo_Source_TechDemo_ShootingComponent_h_18_PRIVATE_PROPERTY_OFFSET \
-	TechDemo_Source_TechDemo_ShootingComponent_h_18_RPC_WRAPPERS \
-	TechDemo_Source_TechDemo_ShootingComponent_h_18_INCLASS \
-	TechDemo_Source_TechDemo_ShootingComponent_h_18_STANDARD_CONSTRUCTORS \
+	TechDemo_Source_TechDemo_ShootingComponent_h_21_PRIVATE_PROPERTY_OFFSET \
+	TechDemo_Source_TechDemo_ShootingComponent_h_21_RPC_WRAPPERS \
+	TechDemo_Source_TechDemo_ShootingComponent_h_21_INCLASS \
+	TechDemo_Source_TechDemo_ShootingComponent_h_21_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TechDemo_Source_TechDemo_ShootingComponent_h_18_GENERATED_BODY \
+#define TechDemo_Source_TechDemo_ShootingComponent_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TechDemo_Source_TechDemo_ShootingComponent_h_18_PRIVATE_PROPERTY_OFFSET \
-	TechDemo_Source_TechDemo_ShootingComponent_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	TechDemo_Source_TechDemo_ShootingComponent_h_18_INCLASS_NO_PURE_DECLS \
-	TechDemo_Source_TechDemo_ShootingComponent_h_18_ENHANCED_CONSTRUCTORS \
+	TechDemo_Source_TechDemo_ShootingComponent_h_21_PRIVATE_PROPERTY_OFFSET \
+	TechDemo_Source_TechDemo_ShootingComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	TechDemo_Source_TechDemo_ShootingComponent_h_21_INCLASS_NO_PURE_DECLS \
+	TechDemo_Source_TechDemo_ShootingComponent_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

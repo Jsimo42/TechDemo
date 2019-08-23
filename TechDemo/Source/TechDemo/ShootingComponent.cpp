@@ -85,8 +85,6 @@ void UShootingComponent::Fire()
 
 			if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Shotgun_C_0")
 			{
-				maxAmmo = 4;
-
 				if (currentAmmo > 0)
 				{
 					ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
@@ -121,8 +119,6 @@ void UShootingComponent::Fire()
 			}
 			else if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Pistol_C_0")
 			{
-				maxAmmo = 25;
-					
 				if (currentAmmo > 0)
 				{
 					ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
