@@ -83,9 +83,9 @@ void UShootingComponent::Fire()
 			spawnParams.Owner = GetOwner();
 			spawnParams.Instigator = GetOwner()->Instigator;
 
-			if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Shotgun_C_0")
+			if (currentAmmo > 0)
 			{
-				if (currentAmmo > 0)
+				if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Shotgun_C_0")
 				{
 					ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
 					ABullet* bullet1 = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
@@ -112,14 +112,7 @@ void UShootingComponent::Fire()
 
 					currentAmmo--;
 				}
-				else
-				{
-					return;
-				}
-			}
-			else if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Pistol_C_0")
-			{
-				if (currentAmmo > 0)
+				else if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Pistol_C_0")
 				{
 					ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
 
@@ -128,10 +121,22 @@ void UShootingComponent::Fire()
 
 					currentAmmo--;
 				}
-				else
+				else if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Rifle_C_0")
 				{
-					return;
+					for (int i = 0; i < 2; i++)
+					{
+						ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
+
+						FVector launchDirection = muzzleRot.Vector();
+						bullet->FireInDirection(launchDirection);
+
+						currentAmmo--;
+					}
 				}
+			}
+			else
+			{
+				return;
 			}
 		}
 	}
@@ -140,4 +145,3 @@ void UShootingComponent::Fire()
 		UE_LOG(LogTemp, Error, TEXT("No projectile class"))
 	}
 }
-

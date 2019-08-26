@@ -41,24 +41,10 @@ void UWeaponGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorC
 
 	AActor* actorHit = lineTraceHit.GetActor();
 
-	if (actorHit)
+	if (actorHit && !weaponAttached)
 	{
 		lastActorHit = actorHit;
 	}
-}
-
-bool UWeaponGrabber::GetWeaponAttached()
-{
-	if (lastActorHit == nullptr)
-	{
-		return false;
-	}
-	else
-	{
-		return true;
-	}
-
-	return false;
 }
 
 void UWeaponGrabber::Grab()

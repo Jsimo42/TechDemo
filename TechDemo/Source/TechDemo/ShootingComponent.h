@@ -20,7 +20,7 @@ class TECHDEMO_API UShootingComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
-public:	
+public:
 	// Sets default values for this component's properties
 	UShootingComponent();
 
@@ -28,7 +28,7 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
@@ -38,6 +38,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 		FVector muzzleOffset;
+
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+	FString weaponList[3] = { "Shotgun_C_0" , "Pistol_C_0", "Rifle_C_0"};
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
 		int32 maxAmmo = 0;

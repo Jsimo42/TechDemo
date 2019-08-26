@@ -60,6 +60,11 @@ void EmptyLinkFunctionForGeneratedCodeWeaponGrabber() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_armLength;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_weaponAttached_MetaData[];
+#endif
+		static void NewProp_weaponAttached_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_weaponAttached;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsAiming_MetaData[];
 #endif
 		static void NewProp_IsAiming_SetBit(void* Obj);
@@ -96,6 +101,17 @@ void EmptyLinkFunctionForGeneratedCodeWeaponGrabber() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_armLength = { "armLength", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponGrabber, armLength), METADATA_PARAMS(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_armLength_MetaData, ARRAY_COUNT(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_armLength_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_weaponAttached_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "ModuleRelativePath", "WeaponGrabber.h" },
+	};
+#endif
+	void Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_weaponAttached_SetBit(void* Obj)
+	{
+		((UWeaponGrabber*)Obj)->weaponAttached = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_weaponAttached = { "weaponAttached", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UWeaponGrabber), &Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_weaponAttached_SetBit, METADATA_PARAMS(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_weaponAttached_MetaData, ARRAY_COUNT(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_weaponAttached_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_IsAiming_MetaData[] = {
 		{ "Category", "WeaponGrabber" },
 		{ "ModuleRelativePath", "WeaponGrabber.h" },
@@ -121,6 +137,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponGrabber() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_lastActorHit = { "lastActorHit", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UWeaponGrabber, lastActorHit), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_lastActorHit_MetaData, ARRAY_COUNT(Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_lastActorHit_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWeaponGrabber_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_armLength,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_weaponAttached,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_IsAiming,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_onGrab,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWeaponGrabber_Statics::NewProp_lastActorHit,
@@ -152,7 +169,7 @@ void EmptyLinkFunctionForGeneratedCodeWeaponGrabber() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UWeaponGrabber, 2498614905);
+	IMPLEMENT_CLASS(UWeaponGrabber, 3782219808);
 	template<> TECHDEMO_API UClass* StaticClass<UWeaponGrabber>()
 	{
 		return UWeaponGrabber::StaticClass();

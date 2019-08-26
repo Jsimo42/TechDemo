@@ -39,7 +39,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		bool IsAiming = false;
 
-	bool GetWeaponAttached();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
+		bool weaponAttached;
+
+	bool GetWeaponAttached() { return weaponAttached; };
 	bool GetIsAiming() { return IsAiming; };
 	AActor* GetLastActor() { return lastActorHit; }
 

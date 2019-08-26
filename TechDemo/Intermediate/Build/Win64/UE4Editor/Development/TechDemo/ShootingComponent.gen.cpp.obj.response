@@ -426,24 +426,24 @@
 /I ThirdParty
 /I ThirdParty\libSampleRate\Public
 /I ThirdParty\libSampleRate
-/I D:\Documents\UE4\TechDemo\TechDemo\Intermediate\Build\Win64\UE4Editor\Inc\TechDemo
-/I D:\Documents\UE4\TechDemo\TechDemo\Source
-/I D:\Documents\UE4\TechDemo\TechDemo\Source\TechDemo
+/I D:\Documents\TechDemo\TechDemo\Intermediate\Build\Win64\UE4Editor\Inc\TechDemo
+/I D:\Documents\TechDemo\TechDemo\Source
+/I D:\Documents\TechDemo\TechDemo\Source\TechDemo
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
 /I Runtime\AugmentedReality\Public
 /I Runtime\AugmentedReality
 /I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/FI"D:\Documents\UE4\TechDemo\TechDemo\Intermediate\Build\Win64\TechDemoEditor\Development\Engine\SharedPCH.Engine.h"
-/Yu"D:\Documents\UE4\TechDemo\TechDemo\Intermediate\Build\Win64\TechDemoEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"D:\Documents\UE4\TechDemo\TechDemo\Intermediate\Build\Win64\TechDemoEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"D:\Documents\UE4\TechDemo\TechDemo\Intermediate\Build\Win64\UE4Editor\Inc\TechDemo\ShootingComponent.gen.cpp"
-/FI"D:\Documents\UE4\TechDemo\TechDemo\Intermediate\Build\Win64\UE4Editor\Development\TechDemo\Definitions.TechDemo.h"
-/Fo"D:\Documents\UE4\TechDemo\TechDemo\Intermediate\Build\Win64\UE4Editor\Development\TechDemo\ShootingComponent.gen.cpp.obj"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"
+/FI"D:\Documents\TechDemo\TechDemo\Intermediate\Build\Win64\TechDemoEditor\Development\Engine\SharedPCH.Engine.h"
+/Yu"D:\Documents\TechDemo\TechDemo\Intermediate\Build\Win64\TechDemoEditor\Development\Engine\SharedPCH.Engine.h"
+/Fp"D:\Documents\TechDemo\TechDemo\Intermediate\Build\Win64\TechDemoEditor\Development\Engine\SharedPCH.Engine.h.pch"
+"D:\Documents\TechDemo\TechDemo\Intermediate\Build\Win64\UE4Editor\Inc\TechDemo\ShootingComponent.gen.cpp"
+/FI"D:\Documents\TechDemo\TechDemo\Intermediate\Build\Win64\UE4Editor\Development\TechDemo\Definitions.TechDemo.h"
+/Fo"D:\Documents\TechDemo\TechDemo\Intermediate\Build\Win64\UE4Editor\Development\TechDemo\ShootingComponent.gen.cpp.obj"
 /TP
 /GR-
 /W4

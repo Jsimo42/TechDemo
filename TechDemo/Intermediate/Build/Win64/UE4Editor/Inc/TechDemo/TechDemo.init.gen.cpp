@@ -25,7 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeTechDemo_init() {}
 				SingletonFuncArray,
 				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x9B12B6C5,
+				0x87A49BBF,
 				0xCFB6907D,
 				METADATA_PARAMS(nullptr, 0)
 			};
