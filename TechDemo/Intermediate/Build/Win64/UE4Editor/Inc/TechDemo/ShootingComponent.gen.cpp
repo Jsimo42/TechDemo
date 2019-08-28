@@ -13,14 +13,37 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 // Cross Module References
+	TECHDEMO_API UFunction* Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature();
+	UPackage* Z_Construct_UPackage__Script_TechDemo();
 	TECHDEMO_API UClass* Z_Construct_UClass_UShootingComponent_NoRegister();
 	TECHDEMO_API UClass* Z_Construct_UClass_UShootingComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
-	UPackage* Z_Construct_UPackage__Script_TechDemo();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	TECHDEMO_API UClass* Z_Construct_UClass_ABullet_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ShootingComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_TechDemo, nullptr, "RifleFire__DelegateSignature", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	void UShootingComponent::StaticRegisterNativesUShootingComponent()
 	{
 	}
@@ -34,6 +57,15 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_rifleFire_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_rifleFire;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_firing_MetaData[];
+#endif
+		static void NewProp_firing_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_firing;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_projectileClass_MetaData[];
 #endif
@@ -67,6 +99,23 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire_MetaData[] = {
+		{ "ModuleRelativePath", "ShootingComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire = { "rifleFire", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShootingComponent, rifleFire), Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShootingComponent_Statics::NewProp_firing_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "ModuleRelativePath", "ShootingComponent.h" },
+	};
+#endif
+	void Z_Construct_UClass_UShootingComponent_Statics::NewProp_firing_SetBit(void* Obj)
+	{
+		((UShootingComponent*)Obj)->firing = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_firing = { "firing", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UShootingComponent), &Z_Construct_UClass_UShootingComponent_Statics::NewProp_firing_SetBit, METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_firing_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_firing_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass_MetaData[] = {
 		{ "Category", "Projectile" },
 		{ "ModuleRelativePath", "ShootingComponent.h" },
@@ -95,6 +144,8 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_muzzleOffset = { "muzzleOffset", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShootingComponent, muzzleOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_muzzleOffset_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_muzzleOffset_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UShootingComponent_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShootingComponent_Statics::NewProp_firing,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShootingComponent_Statics::NewProp_projectileClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShootingComponent_Statics::NewProp_currentAmmo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UShootingComponent_Statics::NewProp_maxAmmo,
@@ -127,7 +178,7 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UShootingComponent, 3870196768);
+	IMPLEMENT_CLASS(UShootingComponent, 2576821885);
 	template<> TECHDEMO_API UClass* StaticClass<UShootingComponent>()
 	{
 		return UShootingComponent::StaticClass();

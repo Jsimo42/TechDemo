@@ -47,6 +47,7 @@ void UShootingComponent::SetupInputComponent()
 	if (inputComponent)
 	{
 		inputComponent->BindAction("Fire", IE_Pressed, this, &UShootingComponent::Fire);
+		inputComponent->BindAction("Fire", IE_Released, this, &UShootingComponent::StopFire);
 		inputComponent->BindAction("Reload", IE_Pressed, this, &UShootingComponent::Reload);
 	}
 	else
@@ -57,8 +58,9 @@ void UShootingComponent::SetupInputComponent()
 
 void UShootingComponent::Fire()
 {
-	//UE_LOG(LogTemp, Warning, TEXT("Bang!"))
+	firing = true;
 
+	//Check Player is aiming
 	if (!weaponGrabber->GetWeaponAttached() || !weaponGrabber->GetIsAiming())
 	{
 		UE_LOG(LogTemp, Error, TEXT("No weapon"))
@@ -87,51 +89,36 @@ void UShootingComponent::Fire()
 			{
 				if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Shotgun_C_0")
 				{
-					ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
-					ABullet* bullet1 = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
-					ABullet* bullet2 = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
+					for (int i = 0; i < 3; i++)
+					{
+						ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
 
-					//Randomise X and Y values
-					int32 x = FMath::RandRange(muzzleRot.Roll - 5, muzzleRot.Roll + 5);
-					int32 y = FMath::RandRange(muzzleRot.Pitch - 5, muzzleRot.Pitch + 5);
+						//Randomise X and Y values
+						int32 x = FMath::RandRange(muzzleRot.Roll - 5, muzzleRot.Roll + 5);
+						int32 y = FMath::RandRange(muzzleRot.Pitch - 5, muzzleRot.Pitch + 5);
 
-					FVector launchDirection = { (float)x, (float)y, muzzleRot.Vector().Z };
-					bullet->FireInDirection(launchDirection);
+						FVector launchDirection = { (float)x, (float)y, muzzleRot.Vector().Z };
+						Launch(bullet, launchDirection);
 
-					x = FMath::RandRange(muzzleRot.Roll - 5, muzzleRot.Roll + 5);
-					y = FMath::RandRange(muzzleRot.Pitch - 5, muzzleRot.Pitch + 5);
+						currentAmmo--;
 
-					launchDirection = { (float)x, (float)y, muzzleRot.Vector().Z };;
-					bullet1->FireInDirection(launchDirection);
-
-					x = FMath::RandRange(muzzleRot.Roll - 5, muzzleRot.Roll + 5);
-					y = FMath::RandRange(muzzleRot.Pitch - 5, muzzleRot.Pitch + 5);
-
-					launchDirection = { (float)x, (float)y, muzzleRot.Vector().Z };;
-					bullet2->FireInDirection(launchDirection);
-
-					currentAmmo--;
+						UE_LOG(LogTemp, Warning, TEXT("Shotgun Fire"));
+					}
 				}
 				else if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Pistol_C_0")
 				{
 					ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
 
-					FVector launchDirection = muzzleRot.Vector();
-					bullet->FireInDirection(launchDirection);
+					Launch(bullet, muzzleRot.Vector());
 
 					currentAmmo--;
+					UE_LOG(LogTemp, Warning, TEXT("Pistol Fire"));
 				}
 				else if (weaponGrabber->GetLastActor()->GetHumanReadableName() == "Rifle_C_0")
 				{
-					for (int i = 0; i < 2; i++)
-					{
-						ABullet* bullet = world->SpawnActor<ABullet>(projectileClass, muzzlePos, muzzleRot, spawnParams);
+					rifleFire.Broadcast();
 
-						FVector launchDirection = muzzleRot.Vector();
-						bullet->FireInDirection(launchDirection);
-
-						currentAmmo--;
-					}
+					UE_LOG(LogTemp, Warning, TEXT("Rifle Fire"));
 				}
 			}
 			else
@@ -144,4 +131,9 @@ void UShootingComponent::Fire()
 	{
 		UE_LOG(LogTemp, Error, TEXT("No projectile class"))
 	}
+}
+
+void UShootingComponent::Launch(ABullet* bulletIn, FVector launchDirectionIn)
+{
+	bulletIn->FireInDirection(launchDirectionIn);
 }

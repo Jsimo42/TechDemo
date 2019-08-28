@@ -12,6 +12,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeTechDemo_init() {}
 	TECHDEMO_API UFunction* Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature();
+	TECHDEMO_API UFunction* Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_TechDemo()
 	{
 		static UPackage* ReturnPackage = nullptr;
@@ -19,14 +20,15 @@ void EmptyLinkFunctionForGeneratedCodeTechDemo_init() {}
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_TechDemo_OnGrab__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature,
 			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/TechDemo",
 				SingletonFuncArray,
 				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x87A49BBF,
-				0xCFB6907D,
+				0x28A094A2,
+				0x40125E2D,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

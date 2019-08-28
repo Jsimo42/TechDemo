@@ -14,6 +14,7 @@
 #include "Components/ActorComponent.h"
 #include "ShootingComponent.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FRifleFire);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class TECHDEMO_API UShootingComponent : public UActorComponent
@@ -40,7 +41,7 @@ public:
 		FVector muzzleOffset;
 
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
-	FString weaponList[3] = { "Shotgun_C_0" , "Pistol_C_0", "Rifle_C_0"};
+		FString weaponList[3] = { "Shotgun_C_0" , "Pistol_C_0", "Rifle_C_0"};
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
 		int32 maxAmmo = 0;
@@ -51,8 +52,18 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
 		TSubclassOf<class ABullet> projectileClass;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Projectile)
+		bool firing = false;
+
+	UPROPERTY(BlueprintAssignable)
+		FRifleFire rifleFire;
+
+private:
+
 	void SetupInputComponent();
 
 	void Fire();
+	void StopFire() { firing = false; };
+	void Launch(ABullet* bulletIn, FVector launchDirectionIn);
 	void Reload() { currentAmmo = maxAmmo; }
 };

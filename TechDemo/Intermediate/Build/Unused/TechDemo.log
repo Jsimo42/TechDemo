@@ -1,0 +1,5 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Documents\UE4\TechDemo).
+  Creating makefile for TechDemoEditor (ini files are newer than makefile)
+  Parsing headers for TechDemoEditor
+    Running UnrealHeaderTool "D:\Documents\UE4\TechDemo\TechDemo\TechDemo.uproject" "D:\Documents\UE4\TechDemo\TechDemo\Intermediate\Build\Win64\TechDemoEditor\Development\TechDemoEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.MakeFile.Targets(44,5): warning MSB5021: Terminating the task executable "cmd" and its child processes because the build was canceled.
