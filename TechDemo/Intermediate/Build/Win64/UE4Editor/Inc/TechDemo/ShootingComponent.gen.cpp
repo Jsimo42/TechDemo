@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 		{ "ModuleRelativePath", "ShootingComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire = { "rifleFire", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShootingComponent, rifleFire), Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire_MetaData)) };
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire = { "rifleFire", nullptr, (EPropertyFlags)0x0010100010080000, UE4CodeGen_Private::EPropertyGenFlags::MulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UShootingComponent, rifleFire), Z_Construct_UDelegateFunction_TechDemo_RifleFire__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire_MetaData, ARRAY_COUNT(Z_Construct_UClass_UShootingComponent_Statics::NewProp_rifleFire_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UShootingComponent_Statics::NewProp_firing_MetaData[] = {
 		{ "Category", "Projectile" },
@@ -178,7 +178,7 @@ void EmptyLinkFunctionForGeneratedCodeShootingComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UShootingComponent, 2576821885);
+	IMPLEMENT_CLASS(UShootingComponent, 3188235334);
 	template<> TECHDEMO_API UClass* StaticClass<UShootingComponent>()
 	{
 		return UShootingComponent::StaticClass();
